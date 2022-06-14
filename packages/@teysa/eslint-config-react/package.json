@@ -1,18 +1,26 @@
 {
   "name": "@teysa/eslint-config-react",
   "version": "0.0.1",
-  "description": "Eslint config for @teysa React projects",
+  "description": "Esling config for @teysa React projects",
   "keywords": [
-    "Eslint"
+    "eslint",
+    "React"
   ],
   "author": "Brian George <bhgeorge.dev@gmail.com>",
+  "homepage": "https://github.com/bhgeorge/teysa#readme",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhgeorge/teysa.git"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "fb8e78a6f079436204a31e689accb33a07a1086e"
+  "bugs": {
+    "url": "https://github.com/bhgeorge/teysa/issues"
+  }
 }

@@ -1,20 +1,17 @@
 # `@teysa/eslint-config-react`
 
-Shared eslint configuration for `@teysa` React-based projects.
+Pluggable eslint config for `@teysa` React projects
 
 ## Usage
 
-Install this package as a dev dependency
-
+Install as a dev dependency
 ```
-yarn add -D @dullaghan/eslint-config-react
-
+yarn add -D @teysa/eslint-config-react
 ```
 
-Add an `.eslintrc.json` file to the root of your project with the following
-
+Add an `eslintrc.json` file to the root of your repository with the following
 ```
 {
-  "extends": ["@teysa/eslint-config-react"]
+  "extends": ["@dullaghan/eslint-config-react"]
 }
 ```
