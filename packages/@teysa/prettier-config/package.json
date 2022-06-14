@@ -30,7 +30,7 @@
     "url": "https://github.com/bhgeorge/teysa/issues"
   },
   "dependencies": {
-    "prettier": "^2.7.0",
-    "prettier-plugin-tailwindcss": "^0.1.11"
-  }
+    "prettier": "^2.7.0"
+  },
+  "gitHead": "e57a3e3797e117722bce67b628ac685aa8945b0f"
 }

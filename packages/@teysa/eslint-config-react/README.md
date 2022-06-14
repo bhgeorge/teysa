@@ -12,6 +12,6 @@ yarn add -D @teysa/eslint-config-react
 Add an `eslintrc.json` file to the root of your repository with the following
 ```
 {
-  "extends": ["@dullaghan/eslint-config-react"]
+  "extends": ["@teysa/eslint-config-react"]
 }
 ```

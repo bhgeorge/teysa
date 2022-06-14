@@ -12,5 +12,5 @@ npm i -D @dullaghan/prettier-config
 
 Create a .prettierrc file with the following
 ```
-"@dullaghan/prettier-config"
+"@teysa/prettier-config"
 ```
