@@ -1,6 +1,6 @@
 {
   "name": "@teysa/eslint-config-react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Esling config for @teysa React projects",
   "keywords": [
     "eslint",
@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/bhgeorge/teysa/issues"
   },
-  "gitHead": "cf3f27e475cf2df8259b607a10df06888a61ffe3",
+  "gitHead": "39f2a3eb53fb789108982ca95bb255a25d7a25c2",
   "dependencies": {
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^19.0.4",
