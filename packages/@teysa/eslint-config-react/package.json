@@ -1,6 +1,6 @@
 {
   "name": "@teysa/eslint-config-react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Esling config for @teysa React projects",
   "keywords": [
     "eslint",
