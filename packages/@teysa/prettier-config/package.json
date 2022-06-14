@@ -1,6 +1,6 @@
 {
   "name": "@teysa/prettier-config",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Prettier config",
   "keywords": [
     "prettier"
@@ -17,5 +17,6 @@
   "dependencies": {
     "prettier": "^2.7.0",
     "prettier-plugin-tailwindcss": "^0.1.11"
-  }
+  },
+  "gitHead": "7b040f9a9783f3910ff17bda3ffa701370476bc1"
 }
