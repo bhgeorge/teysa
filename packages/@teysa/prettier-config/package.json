@@ -1,6 +1,6 @@
 {
   "name": "@teysa/prettier-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Prettier config",
   "keywords": [
     "prettier"
