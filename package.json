@@ -8,6 +8,10 @@
   },
   "author": "Brian George <bhgeorge.dev@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhgeorge/teysa.git"
+  },
   "devDependencies": {
     "lerna": "^5.1.1"
   }

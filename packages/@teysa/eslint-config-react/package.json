@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/bhgeorge/teysa/issues"
   },
-  "gitHead": "072321500f66e93bce872f51118d66d3cb73de4b",
+  "gitHead": "cf3f27e475cf2df8259b607a10df06888a61ffe3",
   "dependencies": {
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^19.0.4",
