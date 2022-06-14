@@ -1,0 +1,21 @@
+{
+  "name": "@teysa/prettier-config",
+  "version": "0.0.0",
+  "description": "Prettier config",
+  "keywords": [
+    "prettier"
+  ],
+  "author": "Brian George <bhgeorge.dev@gmail.com>",
+  "license": "MIT",
+  "main": "index.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "prettier": "^2.7.0",
+    "prettier-plugin-tailwindcss": "^0.1.11"
+  }
+}
