@@ -1,6 +1,7 @@
 {
+  "npmClient": "yarn",
   "packages": [
-    "packages/*"
+    "packages/@teysa/*"
   ],
   "version": "0.0.0"
 }
