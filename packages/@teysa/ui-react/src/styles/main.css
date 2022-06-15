@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @variants dark {
+    .theme-dark {
+      --theme-text: theme('colors.white');
+      --theme-text-alt: theme('colors.gray.white');
+      --theme-bg: theme('colors.black');
+      --theme-bg-alt: rgba(234, 227, 242, 0.08);
+      --theme-error: theme('colors.red.dark');
+      --theme-success: theme('colors.teal.dark');
+      --theme-warning: theme('colors.yellow.dark');
+    }
+  }
+
+  .theme-light {
+    --theme-text: theme('colors.black');
+    --theme-text-alt: theme('colors.purple.black');
+    --theme-bg: theme('colors.white');
+    --theme-bg-alt: rgba(14, 12, 19, 0.08);
+    --theme-error: theme('colors.red.dark');
+    --theme-success: theme('colors.teal.dark');
+    --theme-warning: theme('colors.yellow.dark');
+  }
+}
