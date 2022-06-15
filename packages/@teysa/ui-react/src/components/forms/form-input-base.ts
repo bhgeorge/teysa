@@ -11,7 +11,16 @@ export interface FormInputBase {
 // Styles
 export const getInputClasses = (hasError: boolean) => {
   const borderColor = hasError ? 'border-theme-error' : 'border-theme-bg-alt';
-  return classNames('bg-theme-bg-alt', 'border', 'w-full', 'py-1.5', 'px-1', borderColor);
+  return classNames(
+    'appearance-none',
+    'bg-theme-bg-alt',
+    'border',
+    'px-1',
+    'py-1.5',
+    'relative',
+    'w-full',
+    borderColor
+  );
 };
 
 // ID helpers

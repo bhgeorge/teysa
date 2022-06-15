@@ -6,11 +6,12 @@ const FormInputDatepicker = ({ name, label, error, helpText, required }: FormInp
   <FormInputWrapper
     error={error}
     helpText={helpText}
+    icon="date"
     label={label}
     name={name}
     required={required}
     type="date"
-  ></FormInputWrapper>
+  />
 );
 
 export default FormInputDatepicker;

@@ -21,6 +21,7 @@ const FieldInputSelect = ({
     as="select"
     error={error}
     helpText={helpText}
+    icon="expand"
     label={label}
     name={name}
     required={required}

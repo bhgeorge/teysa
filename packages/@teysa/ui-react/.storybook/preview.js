@@ -21,11 +21,11 @@ export const globalTypes = {
   theme: {
     name: 'Theme',
     description: 'Component window theme',
-    default: 'theme-dark',
+    default: 'theme-orzhov',
     toolbar: {
       icon: 'paintbrush',
       items: [
-        { value: 'theme-dark', title: 'Dark' },
+        { value: 'theme-orzhov', title: 'Orzhov' },
         { value: 'theme-light', title: 'Light' },
       ],
     },

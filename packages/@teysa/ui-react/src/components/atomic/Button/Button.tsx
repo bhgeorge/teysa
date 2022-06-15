@@ -15,23 +15,34 @@ interface ButtonProps {
   variant?: ButtonVariant;
 }
 
-const buttonBaseClasses =
-  'font-bold inline-flex justify-between items-center self-start border-2 py-1 px-2';
+const buttonBaseClasses = classNames(
+  'border-2',
+  'group',
+  'px-2',
+  'py-1',
+  'font-regular',
+  'rounded-sm',
+  'self-start',
+  'hover:underline',
+  'hover:border-theme-interact-hover',
+  'font-bold',
+  'inline-flex',
+  'self-start',
+  'items-center'
+);
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: classNames(
     buttonBaseClasses,
-    'bg-theme-text',
-    'border-theme-text',
+    'border-theme-interact',
+    'bg-theme-interact',
     'text-theme-bg',
-    'hover:bg-theme-text-alt',
-    'hover:border-theme-text-alt'
+    'hover:bg-theme-interact-hover'
   ),
   secondary: classNames(
     buttonBaseClasses,
-    'hover:bg-theme-text-alt',
-    'hover:text-theme-bg',
-    'border-theme-text-alt'
+    'border-theme-interact',
+    'hover:text-theme-interact-hover'
   ),
 };
 
@@ -47,8 +58,12 @@ const Button = ({
 
   if (href) {
     return (
-      <Link href={href} onClick={onClick} className={cN}>
-        {children}
+      <Link href={href} onClick={onClick} className={classNames(cN, 'inline-flex')}>
+        <span className="inline-flex items-center justify-between relative z-20">{children}</span>
+        <span
+          style={{ height: '200%' }}
+          className="absolute top-0 left-0 w-full transform translate-y-0 transition-transform group-hover:-translate-y-1/2 interact-gradient"
+        />
       </Link>
     );
   }

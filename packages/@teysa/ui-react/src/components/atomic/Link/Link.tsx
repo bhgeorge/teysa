@@ -13,7 +13,9 @@ interface LinkProps {
 
 const Link = ({ href, children, className, onClick }: LinkProps) => {
   const isExternal = !/^\/|#/g.test(href);
-  const cN = className ? className : 'underline inline-flex items-center hover:text-theme-text-alt';
+  const cN = className
+    ? className
+    : 'underline text-theme-interact inline-flex items-center hover:text-theme-interact-hover';
 
   if (isExternal) {
     return (

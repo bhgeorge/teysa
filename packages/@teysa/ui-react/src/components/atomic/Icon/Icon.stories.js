@@ -7,7 +7,7 @@ export default {
   argTypes: {
     icon: {
       control: 'select',
-      options: ['new-tab'],
+      options: ['date', 'expand', 'new-tab'],
     },
   },
 };

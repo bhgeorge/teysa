@@ -1,15 +1,16 @@
 // Global
-import React from 'react';
+import React, { Profiler } from 'react';
 import classNames from 'classnames';
 // Components
 import Heading from '../Heading/Heading';
 
 type ToastVariant = 'success' | 'error' | 'none';
 
-interface ToastProps {
+export interface ToastProps {
   text?: string;
   title?: string;
   variant?: ToastVariant;
+  role?: 'alert';
 }
 
 const variantClasses: Record<ToastVariant, string> = {
@@ -18,7 +19,7 @@ const variantClasses: Record<ToastVariant, string> = {
   none: '',
 };
 
-const Toast = ({ title, text, variant = 'none' }: ToastProps) => {
+const Toast = ({ title, text, variant = 'none', role }: ToastProps) => {
   if (!title && !text) {
     return <></>;
   }
@@ -35,6 +36,7 @@ const Toast = ({ title, text, variant = 'none' }: ToastProps) => {
         'w-full',
         variantClasses[variant]
       )}
+      role={role}
     >
       {!!title && (
         <Heading headingLevel={2} size="xs" className={!!text ? 'mb-1' : undefined}>

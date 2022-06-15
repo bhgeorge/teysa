@@ -43,6 +43,8 @@
     "@teysa/eslint-config-react": "^0.0.5",
     "@teysa/prettier-config": "^0.0.7",
     "@types/react": "^18.0.12",
+    "@types/react-transition-group": "^4.4.4",
+    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "autoprefixer": "^10.4.7",
@@ -63,7 +65,9 @@
     "formik": "^2.2.9",
     "next": "^12.1.6",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-transition-group": "^4.4.2",
+    "uuid": "^8.3.2"
   },
   "gitHead": "b28af8fec66a6c9b30d63ec5ed7ef622f8beb93b",
   "resolutions": {
