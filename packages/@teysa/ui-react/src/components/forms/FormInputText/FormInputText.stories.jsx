@@ -18,5 +18,5 @@ export const Default = Template.bind({});
 Default.args = {
   name: 'firstName',
   label: 'First name',
-  placeholder: 'Teysa Karlov',
+  placeholder: 'Teysa',
 };
