@@ -14,6 +14,7 @@ module.exports = {
         },
       },
     },
+    'storybook-addon-next',
   ],
   core: {
     builder: 'webpack5',

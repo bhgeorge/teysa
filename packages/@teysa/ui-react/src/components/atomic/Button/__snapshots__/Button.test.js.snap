@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it is a button displays a secondary variant 1`] = `
+<button
+  class="font-bold inline-flex justify-between items-center self-start border-2 py-1 px-2 hover:bg-theme-text-alt hover:text-theme-bg border-theme-text-alt"
+  type="button"
+>
+  Click me
+</button>
+`;
+
+exports[`it is a button displays as a <button> 1`] = `
+<button
+  class="font-bold inline-flex justify-between items-center self-start border-2 py-1 px-2 bg-theme-text border-theme-text text-theme-bg hover:bg-theme-text-alt hover:border-theme-text-alt"
+  type="button"
+>
+  Click me
+</button>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`in any state renders correctly 1`] = `
+<a
+  class="underline inline-flex items-center hover:text-theme-text-alt"
+  href="/test"
+>
+  Click me
+</a>
+`;
