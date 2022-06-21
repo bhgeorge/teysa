@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`if there is an icon renders the icon 1`] = `
+<div>
+  <label
+    class="block mb-1 text-sm"
+    for=":r3:"
+  >
+    First name
+  </label>
+  <div
+    class="relative"
+  >
+    <input
+      class="appearance-none bg-theme-bg-alt border px-1 py-1.5 relative w-full border-theme-bg-alt"
+      id=":r3:"
+      name="firstName"
+      value=""
+    />
+    <span
+      class="absolute top-1/2 right-1 -translate-y-1/2 pointer-events-none"
+    >
+      <svg
+        class="h-6 w-6"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  </div>
+</div>
+`;

@@ -58,12 +58,8 @@ const Button = ({
 
   if (href) {
     return (
-      <Link href={href} onClick={onClick} className={classNames(cN, 'inline-flex')}>
-        <span className="inline-flex items-center justify-between relative z-20">{children}</span>
-        <span
-          style={{ height: '200%' }}
-          className="absolute top-0 left-0 w-full transform translate-y-0 transition-transform group-hover:-translate-y-1/2 interact-gradient"
-        />
+      <Link href={href} onClick={onClick} className={cN}>
+        {children}
       </Link>
     );
   }

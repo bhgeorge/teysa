@@ -2,7 +2,7 @@
 
 exports[`it is a button displays a secondary variant 1`] = `
 <button
-  class="font-bold inline-flex justify-between items-center self-start border-2 py-1 px-2 hover:bg-theme-text-alt hover:text-theme-bg border-theme-text-alt"
+  class="border-2 group px-2 py-1 font-regular rounded-sm self-start hover:underline hover:border-theme-interact-hover font-bold inline-flex self-start items-center border-theme-interact hover:text-theme-interact-hover"
   type="button"
 >
   Click me
@@ -11,7 +11,7 @@ exports[`it is a button displays a secondary variant 1`] = `
 
 exports[`it is a button displays as a <button> 1`] = `
 <button
-  class="font-bold inline-flex justify-between items-center self-start border-2 py-1 px-2 bg-theme-text border-theme-text text-theme-bg hover:bg-theme-text-alt hover:border-theme-text-alt"
+  class="border-2 group px-2 py-1 font-regular rounded-sm self-start hover:underline hover:border-theme-interact-hover font-bold inline-flex self-start items-center border-theme-interact bg-theme-interact text-theme-bg hover:bg-theme-interact-hover"
   type="button"
 >
   Click me

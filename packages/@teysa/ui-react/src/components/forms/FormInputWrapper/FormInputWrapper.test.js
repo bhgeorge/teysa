@@ -2,9 +2,19 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { Formik } from 'formik';
+import dynamic from 'next/dynamic';
+// Components
+import IconDate from '../../atomic/Icon/icons/icon__new-tab';
 // Local
 import FormInputWrapper from './FormInputWrapper';
 import { getErrorId, getHelpTextId } from '../form-input-base';
+
+// Mock Icon dynamic import
+jest.mock('next/dynamic');
+
+beforeAll(() => {
+  dynamic.mockImplementation(() => IconDate);
+});
 
 const FIELD_NAME = 'firstName';
 const LABEL_TEXT = 'First name';
@@ -54,5 +64,12 @@ describe('if there is help text', () => {
     const helpText = component.getByText(HELP_TEXT);
     const id = component.getByRole('textbox').getAttribute('id');
     expect(helpText.getAttribute('id')).toBe(getHelpTextId(id));
+  });
+});
+
+describe('if there is an icon', () => {
+  it('renders the icon', () => {
+    const component = createComponent({ icon: 'date' });
+    expect(component.container.firstChild).toMatchSnapshot();
   });
 });

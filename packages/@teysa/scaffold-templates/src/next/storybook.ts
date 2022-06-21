@@ -5,7 +5,7 @@ export const storybookTemplate: TeysaCli.Template<TeysaCli.TemplateArgs> = ({
   name,
   dir,
 }) => `// Local
-import ${name} from './${name}/${name}';
+import ${name} from './${name}';
 
 export default {
   title: '${dir.name}/${name}',

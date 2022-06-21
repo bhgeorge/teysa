@@ -1,8 +1,15 @@
+const { componentTemplate, testTemplate, storybookTemplate } = require('@teysa/scaffold-templates');
+
 module.exports = {
   scaffold: {
-    dirs: [{ name: 'Foo', path: './src/foo', storybook: 'Scaffold/' }],
+    dirs: [
+      { name: 'Atomic', path: './src/components/atomic' },
+      { name: 'Forms', path: './src/components/forms' },
+    ],
     templates: {
-      '[name].jsx': () => `Moo`,
+      '[name].tsx': componentTemplate,
+      '[name].test.js': testTemplate,
+      '[name].stories.js': storybookTemplate,
     },
   },
 };

@@ -6,7 +6,7 @@ export const testTemplate: TeysaCli.Template<TeysaCli.TemplateArgs> = ({
 }) => `// Global
 import { render } from '@testing-library/react';
 // Local
-import ${name} from './${name}/${name}';
+import ${name} from './${name}';
 
 const createComponent = (props) => render(<${name} {...props} />);
 
