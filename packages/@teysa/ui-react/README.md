@@ -1,11 +1,17 @@
 # `@teysa/ui-react`
 
-> TODO: description
+Common UI components for NextJS projects
 
 ## Usage
 
-```
-const uiReact = require('@teysa/ui-react');
+Install `@teysa/ui-react` as a dependency
 
-// TODO: DEMONSTRATE API
+```
+yarn add @teysa/ui-react
+```
+
+In your `pages/_app.tsx` file import the CSS file
+
+```
+import '@teysa/ui-react/dist/teysa.css';
 ```

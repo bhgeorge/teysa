@@ -4,3 +4,6 @@ node_modules
 *.log
 coverage
 dist
+*.tsbuildinfo
+.rollup.cache
+packages/@teysa/test

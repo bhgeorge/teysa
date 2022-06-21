@@ -3,18 +3,16 @@
 @tailwind utilities;
 
 @layer utilities {
-  @variants dark {
-    .theme-orzhov {
-      --theme-text: #fbfae9;
-      --theme-text-alt: #f8f3c9;
-      --theme-bg: #150f10;
-      --theme-bg-alt: #4e414c;
-      --theme-error: #c879a3;
-      --theme-success: #bb874e;
-      --theme-warning: #bb874e;
-      --theme-interact: #f8f3c9;
-      --theme-interact-hover: #bb874e;
-    }
+  .theme-orzhov {
+    --theme-text: #fbfae9;
+    --theme-text-alt: #f8f3c9;
+    --theme-bg: #150f10;
+    --theme-bg-alt: #4e414c;
+    --theme-error: #c879a3;
+    --theme-success: #bb874e;
+    --theme-warning: #bb874e;
+    --theme-interact: #f8f3c9;
+    --theme-interact-hover: #bb874e;
   }
 
   .drop {

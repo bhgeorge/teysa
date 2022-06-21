@@ -1,6 +1,4 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{ts,tsx}', './.storybook/preview.js', './.storybook/components/*.tsx'],
   theme: {
     colors: {
       theme: {
@@ -27,9 +25,6 @@ module.exports = {
       spacing: {
         gutter: '1rem',
         em: '1em',
-      },
-      zIndex: {
-        behind: '-1',
       },
     },
   },
