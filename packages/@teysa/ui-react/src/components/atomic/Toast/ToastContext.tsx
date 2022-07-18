@@ -48,7 +48,7 @@ const ToastContextProvider = ({ children }: ToastContextProviderProps) => {
           <ul>
             <TransitionGroup>
               {toasts.map((toast) => (
-                <CSSTransition key={toast.id} timeout={300} className="drop">
+                <CSSTransition key={toast.id} timeout={300} className="animate-drop">
                   <li className="w-full">
                     <Toast
                       title={toast.title}

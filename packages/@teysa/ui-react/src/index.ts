@@ -17,4 +17,4 @@ export { default as VerticalGroup } from './components/layout/VerticalGroup/Vert
 export { default as ToastContext, useToastContext } from './components/atomic/Toast/ToastContext';
 
 // CSS
-export { default as tailwindConfig } from './styles/tailwind.config.cjs';
+export { default as tailwindConfig } from './styles/tailwind.config.js';

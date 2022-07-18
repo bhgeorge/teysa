@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/bhgeorge/teysa/issues"
   },
-  "gitHead": "b28af8fec66a6c9b30d63ec5ed7ef622f8beb93b",
+  "gitHead": "9457b4b044648f2aebeb1e20b272d085c68f82d4",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",

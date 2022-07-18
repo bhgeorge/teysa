@@ -1,4 +1,4 @@
-const teysaConfig = require('./src/styles/tailwind.config.cjs');
+const teysaConfig = require('./src/styles/tailwind.config.js');
 
 // All config should be handled in src/styles/tailwind.config.js
 module.exports = {

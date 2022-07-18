@@ -8,7 +8,6 @@
     "allowJs": true,
     "declaration": true,
     "declarationDir": "types",
-    "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
@@ -16,11 +15,12 @@
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
+    "outDir": "dist",
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules", "dist", "src/styles/tailwind.config.cjs"]
+  "exclude": ["node_modules", "dist"]
 }

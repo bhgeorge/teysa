@@ -1,0 +1,90 @@
+{
+  "name": "@teysa/ui-next",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "analyze": "size-limit --why",
+    "build": "tsdx build",
+    "dev": "start-storybook -p 6006",
+    "lint": "tsdx lint",
+    "local": "yarn build && node ./scripts/local.js",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "test": "tsdx test"
+  },
+  "peerDependencies": {
+    "classnames": "^2.3.1",
+    "formik": "^2.2.9",
+    "next": "^12.2.0",
+    "react": ">=18",
+    "react-transition-group": "^4.4.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "author": "Brian George <bhgeorge.dev@gmail.com>",
+  "module": "dist/ui-next.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/ui-next.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/ui-next.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addons": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@testing-library/react": "^13.3.0",
+    "@teysa/eslint-config-react": "^0.0.5",
+    "@teysa/prettier-config": "^0.0.7",
+    "@teysa/scaffold-templates": "^0.0.10",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-transition-group": "^4.4.5",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "classnames": "^2.3.1",
+    "formik": "^2.2.9",
+    "fs-extra": "^10.1.0",
+    "husky": "^8.0.1",
+    "next": "^12.2.0",
+    "postcss": "^8.4.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "react-transition-group": "^4.4.2",
+    "size-limit": "^7.0.8",
+    "tailwindcss": "^3.1.4",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}
