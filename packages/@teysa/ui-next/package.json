@@ -63,9 +63,9 @@
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.9",
     "@testing-library/react": "^13.3.0",
-    "@teysa/eslint-config-react": "^0.0.5",
-    "@teysa/prettier-config": "^0.0.7",
-    "@teysa/scaffold-templates": "^0.0.10",
+    "@teysa/eslint-config-react": "^0.2.0",
+    "@teysa/prettier-config": "^0.2.0",
+    "@teysa/scaffold-templates": "^0.2.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/react-transition-group": "^4.4.5",
@@ -86,5 +86,6 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
-  }
+  },
+  "gitHead": "da2eb660e8a38cce5010356650a745ce89016238"
 }
