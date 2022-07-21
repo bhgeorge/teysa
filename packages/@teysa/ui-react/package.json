@@ -1,6 +1,6 @@
 {
   "name": "@teysa/ui-react",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Common React components",
   "keywords": [
     "React"
@@ -48,9 +48,9 @@
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/react": "^13.3.0",
-    "@teysa/eslint-config-react": "^0.2.0",
-    "@teysa/prettier-config": "^0.2.0",
-    "@teysa/scaffold-templates": "^0.2.0",
+    "@teysa/eslint-config-react": "^0.2.1",
+    "@teysa/prettier-config": "^0.2.1",
+    "@teysa/scaffold-templates": "^0.2.1",
     "@types/react": "^18.0.12",
     "@types/react-transition-group": "^4.4.4",
     "@types/uuid": "^8.3.4",
