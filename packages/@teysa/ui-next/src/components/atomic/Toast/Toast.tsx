@@ -4,7 +4,7 @@ import classNames from 'classnames';
 // Components
 import { Heading } from '../Heading/Heading';
 
-type ToastVariant = 'success' | 'error' | 'none';
+type ToastVariant = 'success' | 'warning' | 'error' | 'none';
 
 export interface ToastProps {
   text?: string;
@@ -15,6 +15,7 @@ export interface ToastProps {
 
 const variantClasses: Record<ToastVariant, string> = {
   success: 'border-l-theme-success',
+  warning: 'border-l-theme-warning',
   error: 'border-l-theme-error',
   none: '',
 };

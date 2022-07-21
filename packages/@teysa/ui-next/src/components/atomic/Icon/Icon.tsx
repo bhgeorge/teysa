@@ -2,7 +2,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-export type IconType = 'date' | 'expand' | 'new-tab';
+export type IconType = 'close' | 'date' | 'expand' | 'new-tab';
 
 type IconSize = 'sm' | 'md' | 'lg' | 'em';
 

@@ -8,6 +8,7 @@ export interface WithHeadingLevel {
   className?: string;
   headingLevel?: ValidHeadingLevel;
   headingOffset?: 0 | ValidHeadingLevel;
+  id?: string;
 }
 
 const TAGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
@@ -17,10 +18,15 @@ export function HeadingTag({
   className,
   headingLevel = 2,
   headingOffset = 0,
+  id,
 }: WithHeadingLevel) {
   const i = headingLevel + headingOffset - 1;
   const tag = i >= TAGS.length ? 'p' : TAGS[i];
   const HTag = tag as keyof JSX.IntrinsicElements;
 
-  return <HTag className={className}>{children}</HTag>;
+  return (
+    <HTag className={className} id={id}>
+      {children}
+    </HTag>
+  );
 }

@@ -41,6 +41,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   ),
   secondary: classNames(
     buttonBaseClasses,
+    'text-theme-interact',
     'border-theme-interact',
     'hover:text-theme-interact-hover'
   ),

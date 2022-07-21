@@ -1,13 +1,15 @@
 // Local
 import { Icon } from './Icon';
 
+const ICONS = ['close', 'date', 'expand', 'new-tab'];
+
 export default {
   title: 'Atomic/Icon',
   component: Icon,
   argTypes: {
     icon: {
       control: 'select',
-      options: ['date', 'expand', 'new-tab'],
+      options: ICONS,
     },
   },
 };
@@ -21,10 +23,10 @@ Default.args = {
 
 const GalleryTemplate = ({ icon, ...props }) => (
   <ul className="flex gap-4">
-    {['date', 'expand', 'new-tab'].map(icon => (
-      <li>
+    {ICONS.map(icon => (
+      <li className="flex flex-col items-center w-16">
         <Icon icon={icon} {...props} />
-        <p className="text-xs text-center my-1">{icon}</p>
+        <p className="text-xs my-1">{icon}</p>
       </li>
     ))}
   </ul>

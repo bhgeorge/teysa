@@ -7,12 +7,24 @@
     --theme-text: #fbfae9;
     --theme-text-alt: #f8f3c9;
     --theme-bg: #150f10;
-    --theme-bg-alt: #4e414c;
-    --theme-error: #c879a3;
-    --theme-success: #bb874e;
-    --theme-warning: #bb874e;
-    --theme-interact: #f8f3c9;
-    --theme-interact-hover: #bb874e;
+    --theme-bg-alt: #433641;
+    --theme-error: #d386af;
+    --theme-success: #9dd975;
+    --theme-warning: #dcbd67;
+    --theme-interact: #dcbd67;
+    --theme-interact-hover: #e9d49b;
+  }
+
+  .theme-sage {
+    --theme-text: #2e3d2d;
+    --theme-text-alt: #465c44;
+    --theme-bg: #fafff4;
+    --theme-bg-alt: #cbdfb3;
+    --theme-error: #a92d67;
+    --theme-success: ##3e7718;
+    --theme-warning: ##996b17;
+    --theme-interact: #176c44;
+    --theme-interact-hover: #103f32;
   }
 
   .animate-drop {

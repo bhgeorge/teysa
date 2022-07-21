@@ -20,7 +20,10 @@ export const globalTypes = {
     default: 'theme-orzhov',
     toolbar: {
       icon: 'paintbrush',
-      items: [{ value: 'theme-orzhov', title: 'Orzhov' }],
+      items: [
+        { value: 'theme-orzhov', title: 'Orzhov' },
+        { value: 'theme-sage', title: 'Sage' },
+      ],
     },
   },
 };

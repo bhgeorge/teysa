@@ -21,6 +21,7 @@ const sizeClasses: Record<HeadingSize, string> = {
 export function Heading({
   headingLevel,
   headingOffset,
+  id,
   children,
   size = 'md',
 }: HeadingProps) {
@@ -28,6 +29,7 @@ export function Heading({
     <HeadingTag
       headingLevel={headingLevel}
       headingOffset={headingOffset}
+      id={id}
       className={classNames(sizeClasses[size])}
     >
       {children}
