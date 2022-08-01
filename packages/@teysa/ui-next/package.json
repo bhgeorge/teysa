@@ -13,6 +13,7 @@
   },
   "scripts": {
     "analyze": "size-limit --why",
+    "build:tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/teysa.css --minify",
     "build": "tsdx build",
     "dev": "start-storybook -p 6006",
     "lint": "tsdx lint",

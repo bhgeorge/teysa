@@ -1,6 +1,7 @@
 // Global
 import React from 'react';
-import dynamic from 'next/dynamic';
+// Local
+import { iconPaths } from './icon-paths';
 
 export type IconType = 'close' | 'date' | 'expand' | 'new-tab';
 
@@ -19,15 +20,13 @@ const iconClasses: Record<IconSize, string> = {
 };
 
 export function Icon({ icon, size = 'md' }: IconProps) {
-  const IconContent = dynamic(() => import(`./icons/icon__${icon}`));
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       className={iconClasses[size]}
     >
-      <IconContent />
+      <path d={iconPaths[icon]} fill="currentColor" />
     </svg>
   );
 }
