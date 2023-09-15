@@ -1,5 +1,5 @@
 // Components
-import Button from '../Button/Button';
+import { Button } from '../Button/Button';
 // Local
 import { Toast } from './Toast';
 import { ToastContextProvider, useToastContext } from './ToastContext';

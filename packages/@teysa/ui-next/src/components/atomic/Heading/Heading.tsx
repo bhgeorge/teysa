@@ -10,7 +10,7 @@ interface HeadingProps extends WithHeadingLevel {
   size?: HeadingSize;
 }
 
-const sizeClasses: Record<HeadingSize, string> = {
+export const sizeClasses: Record<HeadingSize, string> = {
   xs: 'text-sm font-bold mb-2',
   sm: 'text-xl md:text-2xl font-bold mb-4',
   md: 'text-2xl md:text-4xl font-bold mb-4',

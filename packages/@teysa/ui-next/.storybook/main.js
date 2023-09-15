@@ -6,21 +6,11 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    {
-      name: '@storybook/addon-postcss',
-      options: {
-        postcssLoaderOptions: {
-          implementation: require('postcss'),
-        },
-      },
-    },
-    'storybook-addon-next',
+    '@storybook/addon-mdx-gfm',
   ],
-  core: {
-    builder: 'webpack5',
-  },
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {
     check: true, // type-check stories during Storybook build
   },
+  framework: '@storybook/nextjs',
 };

@@ -57,7 +57,7 @@ export function Button({
 }: ButtonProps) {
   const cN = classNames(variantClasses[variant]);
 
-  if (href) {
+  if (href && type !== 'submit') {
     return (
       <Link href={href} onClick={onClick} className={cN}>
         {children}

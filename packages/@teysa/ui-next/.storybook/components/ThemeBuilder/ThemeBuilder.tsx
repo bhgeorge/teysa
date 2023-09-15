@@ -141,7 +141,7 @@ const ThemeBuilder = (themeVars: Record<ThemeVarKey, Hex>) => {
   const hasFailures = Object.keys(contrastObj).length > 0;
 
   return (
-    <VerticalGroup>
+    <>
       <div className="px-4 py-8 text-theme-text bg-theme-bg" style={styleObj}>
         {/* Preview */}
         <Container>
@@ -181,7 +181,7 @@ const ThemeBuilder = (themeVars: Record<ThemeVarKey, Hex>) => {
       </div>
       {/* Contrast Check */}
       {hasFailures && (
-        <div className="p-4 theme-orzhov text-theme-text bg-theme-bg">
+        <div className="p-4 theme-orzhov text-theme-text bg-theme-bg absolute top-4 left-4 border border-theme-bg-alt">
           <Heading size="sm">Test failures</Heading>
           <ul className="flex flex-wrap gap-6">
             {Object.entries(contrastObj).map(([key, val]) => (
@@ -202,7 +202,7 @@ const ThemeBuilder = (themeVars: Record<ThemeVarKey, Hex>) => {
           </ul>
         </div>
       )}
-    </VerticalGroup>
+    </>
   );
 };
 

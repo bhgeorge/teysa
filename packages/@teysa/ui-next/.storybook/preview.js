@@ -17,6 +17,7 @@ export const globalTypes = {
   theme: {
     name: 'Theme',
     description: 'Component window theme',
+    value: 'theme-orzhov',
     default: 'theme-orzhov',
     toolbar: {
       icon: 'paintbrush',

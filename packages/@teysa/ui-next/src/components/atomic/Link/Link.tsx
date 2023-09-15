@@ -35,10 +35,8 @@ export function Link({ href, children, className, onClick }: LinkProps) {
   }
 
   return (
-    <NextLink href={href}>
-      <a className={cN} onClick={onClick}>
-        {children}
-      </a>
+    <NextLink href={href} className={cN} onClick={onClick}>
+      {children}
     </NextLink>
   );
 }

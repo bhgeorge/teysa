@@ -12,9 +12,11 @@ export * from './components/atomic/Toast/Toast';
 export * from './components/atomic/Toast/ToastContext';
 
 // Forms
-export * from './components/forms/FormInputText/FormInputText';
-export * from './components/forms/FormInputSelect/FormInputSelect';
+export * from './components/forms/FieldSet/FieldSet';
+export * from './components/forms/FormInputCheckbox/FormInputCheckbox';
 export * from './components/forms/FormInputDatepicker/FormInputDatepicker';
+export * from './components/forms/FormInputSelect/FormInputSelect';
+export * from './components/forms/FormInputText/FormInputText';
 
 // Layout
 export * from './components/layout/Container/Container';

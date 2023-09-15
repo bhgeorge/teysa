@@ -12,9 +12,11 @@ export interface FormInputBase {
   required?: boolean;
 }
 
+export const getBorderColor = (hasError: boolean) =>
+  hasError ? 'border-theme-error' : 'border-theme-bg-alt';
+
 // Styles
 export const getInputClasses = (hasError: boolean) => {
-  const borderColor = hasError ? 'border-theme-error' : 'border-theme-bg-alt';
   return classNames(
     'appearance-none',
     'bg-theme-bg-alt',
@@ -23,7 +25,7 @@ export const getInputClasses = (hasError: boolean) => {
     'py-1.5',
     'relative',
     'w-full',
-    borderColor
+    getBorderColor(hasError)
   );
 };
 

@@ -35,7 +35,7 @@ Default.args = {
   text: '#fbfae9',
   text_alt: '#f8f3c9',
   bg: '#150f10',
-  bg_alt: '#433641',
+  bg_alt: '#392c38',
   error: '#d386af',
   success: '#9dd975',
   warning: '#dcbd67',
