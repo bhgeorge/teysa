@@ -2,19 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * Items placed here will NOT be copied to the output TW file
+ *
+ * To include custom utils add them to the plugin
+ * located in `src/styles/tailwind.config.js`
+ **/
 @layer utilities {
-  .theme-orzhov {
-    --theme-text: #fbfae9;
-    --theme-text-alt: #f8f3c9;
-    --theme-bg: #150f10;
-    --theme-bg-alt: #392c38;
-    --theme-error: #d386af;
-    --theme-success: #9dd975;
-    --theme-warning: #dcbd67;
-    --theme-interact: #dcbd67;
-    --theme-interact-hover: #e9d49b;
-  }
-
   .theme-sage {
     --theme-text: #2e3d2d;
     --theme-text-alt: #465c44;
@@ -25,14 +19,5 @@
     --theme-warning: ##996b17;
     --theme-interact: #176c44;
     --theme-interact-hover: #103f32;
-  }
-
-  .animate-drop {
-    @apply transform transition-all -translate-y-8 opacity-0;
-  }
-
-  .animate-drop.enter-active,
-  .animate-drop.enter-done {
-    @apply translate-y-0 opacity-100;
   }
 }

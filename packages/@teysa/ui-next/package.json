@@ -13,8 +13,9 @@
   },
   "scripts": {
     "analyze": "size-limit --why",
-    "build:tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/teysa.css --minify",
-    "build": "tsdx build",
+    "build:css": "NODE_ENV=production npx tailwindcss -o ./dist/teysa.css --minify && node ./scripts/copy-tw-config.js",
+    "build:js": "tsdx build",
+    "build": "yarn build:js && yarn build:css",
     "dev": "storybook dev -p 6006",
     "lint": "tsdx lint",
     "local": "yarn build && node ./scripts/local.js",
@@ -23,10 +24,10 @@
     "test": "tsdx test"
   },
   "peerDependencies": {
-    "classnames": "^2.3.1",
-    "focus-trap-react": "^9.0.2",
-    "formik": "^2.2.9",
-    "next": "^12.2.0",
+    "classnames": "^2.3.2",
+    "focus-trap-react": "^10.2.1",
+    "formik": "^2.4.5",
+    "next": "^13.4.19",
     "react": ">=18",
     "react-transition-group": "^4.4.2"
   },

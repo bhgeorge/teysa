@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   theme: {
     colors: {
@@ -28,5 +30,30 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities, config }) {
+      addUtilities({
+        '.theme-orzhov': {
+          '--theme-text': '#fbfae9',
+          '--theme-text-alt': '#f8f3c9',
+          '--theme-bg': '#150f10',
+          '--theme-bg-alt': '#392c38',
+          '--theme-error': '#d386af',
+          '--theme-success': '#9dd975',
+          '--theme-warning': '#dcbd67',
+          '--theme-interact': '#dcbd67',
+          '--theme-interact-hover': '#e9d49b',
+        },
+        '.animate-drop': {
+          '@apply transform transition-all -translate-y-8 opacity-0': {},
+        },
+        '.animate-drop.enter-active': {
+          '@apply translate-y-0 opacity-100': {},
+        },
+        '.animate-drop.enter-done': {
+          '@apply translate-y-0 opacity-100': {},
+        },
+      });
+    }),
+  ],
 };

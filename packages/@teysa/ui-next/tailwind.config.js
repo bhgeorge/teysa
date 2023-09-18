@@ -1,4 +1,4 @@
-const teysaConfig = require('./src/styles/tailwind.config.js');
+const teysaTWConfig = require('./src/styles/tailwind.config.js');
 
 const devOnlyContent = [
   './src/**/*.stories.js',
@@ -6,7 +6,7 @@ const devOnlyContent = [
   './.storybook/components/**/*.tsx',
 ];
 
-let content = ['./src/**/*.{ts,tsx}'];
+let content = ['./src/styles/main.css', './src/**/*.{ts,tsx}'];
 
 if (process.env.NODE_ENV !== 'production') {
   content = content.concat(devOnlyContent);
@@ -15,5 +15,5 @@ if (process.env.NODE_ENV !== 'production') {
 // All config should be handled in src/styles/tailwind.config.js
 module.exports = {
   content,
-  ...teysaConfig,
+  ...teysaTWConfig,
 };
