@@ -21,3 +21,6 @@ export * from './components/forms/FormInputText/FormInputText';
 // Layout
 export * from './components/layout/Container/Container';
 export * from './components/layout/VerticalGroup/VerticalGroup';
+
+// Tailwind
+export * from './styles/tailwind.config';

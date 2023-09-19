@@ -1,6 +1,7 @@
-const plugin = require('tailwindcss/plugin');
+import plugin from 'tailwindcss/plugin';
 
-module.exports = {
+export const tailwindPreset = {
+  content: [],
   theme: {
     colors: {
       theme: {
@@ -18,11 +19,6 @@ module.exports = {
     fontFamily: {
       sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
     },
-    fontWeights: {
-      extralight: '200',
-      regular: '400',
-      bold: '600',
-    },
     extend: {
       spacing: {
         gutter: '1rem',
@@ -31,7 +27,7 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ addUtilities, config }) {
+    plugin(function({ addUtilities }) {
       addUtilities({
         '.theme-orzhov': {
           '--theme-text': '#fbfae9',

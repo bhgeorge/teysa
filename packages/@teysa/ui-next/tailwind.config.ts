@@ -1,4 +1,5 @@
-const teysaTWConfig = require('./src/styles/tailwind.config.js');
+import type { Config } from 'tailwindcss';
+import { tailwindPreset} from './src/styles/tailwind.config';
 
 const devOnlyContent = [
   './src/**/*.stories.js',
@@ -12,8 +13,10 @@ if (process.env.NODE_ENV !== 'production') {
   content = content.concat(devOnlyContent);
 }
 
-// All config should be handled in src/styles/tailwind.config.js
-module.exports = {
+const config: Config = {
   content,
-  ...teysaTWConfig,
-};
+  presets: [tailwindPreset],
+}
+
+// All config should be handled in src/styles/tailwind.config.js
+export default config;
