@@ -48,7 +48,7 @@ export function ToastContextProvider({ children }: ToastContextProviderProps) {
 
   return (
     <ToastContext.Provider value={{ addToast, test: 'moo' }}>
-      <div className="fixed top-0 inset-x-0 z-40 p-2 pointer-events-none">
+      <div className="absolute top-0 inset-x-0 z-40 p-2 pointer-events-none">
         <Container>
           <ul>
             <TransitionGroup>

@@ -34,7 +34,7 @@ export function Modal({
   };
 
   return createPortal(
-    <div className="fixed inset-0 px-8 py-4 backdrop-blur-sm backdrop-brightness-75 overflow-y-auto">
+    <div className="absolute inset-0 px-8 py-4 backdrop-blur-sm backdrop-brightness-75 overflow-y-auto">
       <FocusTrap
         focusTrapOptions={{
           onDeactivate: handleOnClose,
