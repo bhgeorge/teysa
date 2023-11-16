@@ -3,7 +3,13 @@ import React from 'react';
 // Local
 import { iconPaths } from './icon-paths';
 
-export type IconType = 'close' | 'date' | 'expand' | 'new-tab';
+export type IconType =
+  | 'add-box'
+  | 'close'
+  | 'date'
+  | 'expand'
+  | 'new-tab'
+  | 'search';
 
 type IconSize = 'sm' | 'md' | 'lg' | 'em';
 

@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { IconType } from '../atomic/Icon/Icon';
 
 export interface FormInputBase {
-  error?: string;
   helpText?: string;
   icon?: IconType;
   label: string;
@@ -32,11 +31,7 @@ export const getInputClasses = (hasError: boolean) => {
 // ID helpers
 export const getErrorId = (id: string): string => `${id}__error`;
 export const getHelpTextId = (id: string): string => `${id}__help-text`;
-export const getDescribedBy = (
-  id: string,
-  error?: string,
-  helpText?: string
-): string | null => {
+export const getDescribedBy = (id: string, error?: boolean, helpText?: string): string | null => {
   const describedBy = [];
 
   if (error) {

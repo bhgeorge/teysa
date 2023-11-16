@@ -1,6 +1,6 @@
 // Global
 import * as React from 'react';
-import { Field } from 'formik';
+import * as Formik from 'formik';
 // Components
 import { Icon } from '../../atomic/Icon/Icon';
 // Local
@@ -12,15 +12,14 @@ import {
   getInputClasses,
 } from '../form-input-base';
 
-interface FormInputWrapperProps extends FormInputBase {
-  children?: React.ReactNode | React.ReactNode[];
-  [name: string]: unknown;
-}
+type FormInputWrapperProps = FormInputBase &
+  React.PropsWithChildren & {
+    [name: string]: unknown;
+  };
 
 export function FormInputWrapper({
   children,
   label,
-  error,
   helpText,
   name,
   icon,
@@ -29,37 +28,42 @@ export function FormInputWrapper({
 }: FormInputWrapperProps) {
   const id = React.useId();
 
+  const { errors, touched } = Formik.useFormikContext();
+
+  const hasError = Boolean(
+    (touched as Record<string, boolean | undefined>)[name] &&
+      (errors as Record<string, string | undefined>)[name]
+  );
+
   return (
     <div>
       <label htmlFor={id} className="block mb-1 text-sm">
         {label}
       </label>
       <div className="relative">
-        <Field
-          aria-describedby={getDescribedBy(id, error, helpText)}
+        <Formik.Field
+          aria-describedby={getDescribedBy(id, hasError, helpText)}
           aria-required={required}
-          className={getInputClasses(!!error)}
+          className={getInputClasses(hasError)}
           id={id}
           name={name}
           {...props}
         >
           {children}
-        </Field>
+        </Formik.Field>
         {icon && (
           <span className="absolute top-1/2 right-1 -translate-y-1/2 pointer-events-none">
             <Icon icon={icon} />
           </span>
         )}
       </div>
-      {error && (
-        <p
-          role="alert"
-          id={getErrorId(id)}
-          className="text-theme-error my-2 text-sm"
-        >
-          {error}
-        </p>
-      )}
+      <Formik.ErrorMessage name={name}>
+        {err => (
+          <p role="alert" id={getErrorId(id)} className="text-theme-error my-2 text-sm">
+            {err}
+          </p>
+        )}
+      </Formik.ErrorMessage>
       {helpText && (
         <p id={getHelpTextId(id)} className="text-theme-text-alt my-2 text-sm">
           {helpText}

@@ -1,13 +1,12 @@
 // Global
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 
 type ContainerSize = 'sm' | 'md' | 'lg';
 
-interface ContainerProps {
+type ContainerProps = React.PropsWithChildren & {
   size?: ContainerSize;
-  children: ReactNode | ReactNode[];
-}
+};
 
 const sizeClasses: Record<ContainerSize, string> = {
   sm: 'max-w-prose',

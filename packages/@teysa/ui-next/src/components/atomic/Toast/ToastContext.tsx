@@ -1,35 +1,30 @@
 // Global
-import React, { useState, createContext, useContext, useId } from 'react';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import React from 'react';
 // Components
 import { Container } from '../../layout/Container/Container';
 // Local
 import { Toast, ToastProps } from './Toast';
 
-interface GlobalToastProps extends ToastProps {
+type GlobalToastProps = ToastProps & {
   id: string;
-}
+};
 
-interface ToastContextProviderProps {
-  children: React.ReactNode | React.ReactNode[];
-}
-
-const ToastContext = createContext({
+const ToastContext = React.createContext({
   addToast: (toast: ToastProps) => {
     console.log(toast);
   },
   test: 'name',
 });
 
-export const useToastContext = () => useContext(ToastContext);
+export const useToastContext = () => React.useContext(ToastContext);
 
 const TIMEOUT = 2500;
 
-export function ToastContextProvider({ children }: ToastContextProviderProps) {
-  const [numToasts, setNumToasts] = useState<number>(0);
-  const [toasts, setToasts] = useState<GlobalToastProps[]>([]);
+export function ToastContextProvider({ children }: React.PropsWithChildren) {
+  const [numToasts, setNumToasts] = React.useState<number>(0);
+  const [toasts, setToasts] = React.useState<GlobalToastProps[]>([]);
 
-  const componentId = useId();
+  const componentId = React.useId();
 
   const removeToast = (id: string) => {
     setToasts(toasts => toasts.filter(toast => toast.id !== id));
@@ -51,24 +46,16 @@ export function ToastContextProvider({ children }: ToastContextProviderProps) {
       <div className="absolute top-0 inset-x-0 z-40 p-2 pointer-events-none">
         <Container>
           <ul>
-            <TransitionGroup>
-              {toasts.map(toast => (
-                <CSSTransition
-                  key={toast.id}
-                  timeout={300}
-                  className="animate-drop"
-                >
-                  <li className="w-full">
-                    <Toast
-                      title={toast.title}
-                      text={toast.text}
-                      variant={toast.variant}
-                      role="alert"
-                    />
-                  </li>
-                </CSSTransition>
-              ))}
-            </TransitionGroup>
+            {toasts.map(toast => (
+              <li className="w-full">
+                <Toast
+                  title={toast.title}
+                  text={toast.text}
+                  variant={toast.variant}
+                  role="alert"
+                />
+              </li>
+            ))}
           </ul>
         </Container>
       </div>

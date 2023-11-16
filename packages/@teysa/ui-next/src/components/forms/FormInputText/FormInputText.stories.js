@@ -1,5 +1,6 @@
 // Global
-import { Formik } from 'formik';
+import * as Formik from 'formik';
+import * as Yup from 'yup';
 // Local
 import { FormInputText } from './FormInputText';
 
@@ -8,10 +9,18 @@ export default {
   component: FormInputText,
 };
 
+const FormSchema = Yup.object().shape({
+  firstName: Yup.string().required('This field is required'),
+});
+
 const Template = props => (
-  <Formik onSubmit={() => {}} initialValues={{ firstName: '' }}>
+  <Formik.Formik
+    onSubmit={() => {}}
+    initialValues={{ firstName: '' }}
+    validationSchema={FormSchema}
+  >
     <FormInputText {...props} />
-  </Formik>
+  </Formik.Formik>
 );
 
 export const Default = Template.bind({});
@@ -20,4 +29,5 @@ Default.args = {
   label: 'First name',
   placeholder: 'Teysa',
   id: 'first-name',
+  required: true,
 };

@@ -1,7 +1,7 @@
 // Global
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import { Formik } from 'formik';
+import * as Formik from 'formik';
 import dynamic from 'next/dynamic';
 // Components
 import IconDate from '../../atomic/Icon/icons/icon__new-tab';
@@ -31,9 +31,9 @@ const createComponent = (overrideProps = {}) => {
   };
 
   return render(
-    <Formik onSubmit={() => {}} initialValues={{}}>
+    <Formik.Formik onSubmit={() => {}} initialValues={{}}>
       <FormInputWrapper {...props} />
-    </Formik>
+    </Formik.Formik>
   );
 };
 

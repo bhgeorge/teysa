@@ -1,18 +1,17 @@
 // Global
 import FocusTrap from 'focus-trap-react';
 import React, { ReactNode, useId } from 'react';
-import { createPortal } from 'react-dom';
 // Components
 import { Heading } from '../Heading/Heading';
 import { Icon } from '../Icon/Icon';
 
-interface ModalProps {
+type ModalProps = {
   children: ReactNode | ReactNode[];
   isOpen: boolean;
   onClose?: () => void;
   parent: HTMLElement;
   title: string;
-}
+};
 
 export function Modal({
   children,
@@ -33,7 +32,7 @@ export function Modal({
     }
   };
 
-  return createPortal(
+  return (
     <div className="absolute inset-0 px-8 py-4 backdrop-blur-sm backdrop-brightness-75 overflow-y-auto">
       <FocusTrap
         focusTrapOptions={{
@@ -59,7 +58,6 @@ export function Modal({
           <main>{children}</main>
         </div>
       </FocusTrap>
-    </div>,
-    parent
+    </div>
   );
 }

@@ -1,7 +1,6 @@
 // Local
 import { Icon } from './Icon';
-
-const ICONS = ['close', 'date', 'expand', 'new-tab'];
+import { iconPaths } from './icon-paths';
 
 export default {
   title: 'Atomic/Icon',
@@ -9,7 +8,7 @@ export default {
   argTypes: {
     icon: {
       control: 'select',
-      options: ICONS,
+      options: Object.keys(iconPaths),
     },
   },
 };
@@ -23,7 +22,7 @@ Default.args = {
 
 const GalleryTemplate = ({ icon, ...props }) => (
   <ul className="flex gap-4">
-    {ICONS.map(icon => (
+    {Object.keys(iconPaths).map(icon => (
       <li className="flex flex-col items-center w-16">
         <Icon icon={icon} {...props} />
         <p className="text-xs my-1">{icon}</p>

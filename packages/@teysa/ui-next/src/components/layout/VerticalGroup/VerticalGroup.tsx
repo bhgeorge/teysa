@@ -1,15 +1,15 @@
 // Global
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 
-type VerticalGroupSize = 'sm' | 'md' | 'lg';
+type VerticalGroupSize = 'xs' | 'sm' | 'md' | 'lg';
 
-interface VerticalGroupProps {
+type VerticalGroupProps = React.PropsWithChildren & {
   size?: VerticalGroupSize;
-  children: ReactNode | ReactNode[];
-}
+};
 
 const sizeClasses: Record<VerticalGroupSize, string> = {
+  xs: 'gap-y-4',
   sm: 'gap-y-8',
   md: 'gap-y-16',
   lg: 'gap-y-32',

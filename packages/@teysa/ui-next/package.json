@@ -1,6 +1,6 @@
 {
   "name": "@teysa/ui-next",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -28,19 +28,12 @@
     "focus-trap-react": "^10.2.1",
     "formik": "^2.4.5",
     "next": "^13.4.19",
-    "react": ">=18",
-    "react-transition-group": "^4.4.5"
+    "react": ">=18"
   },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
     }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "author": "Brian George <bhgeorge.dev@gmail.com>",
   "module": "dist/ui-next.esm.js",
@@ -57,23 +50,23 @@
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@size-limit/preset-small-lib": "^7.0.8",
-    "@storybook/addon-essentials": "^7.4.1",
+    "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^7.4.1",
-    "@storybook/addon-mdx-gfm": "7.4.1",
-    "@storybook/addons": "^7.4.1",
-    "@storybook/nextjs": "^7.4.1",
-    "@storybook/react": "^7.4.1",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/addon-mdx-gfm": "7.5.3",
+    "@storybook/addons": "^7.5.3",
+    "@storybook/nextjs": "^7.5.3",
+    "@storybook/react": "^7.5.3",
     "@testing-library/react": "^13.3.0",
     "@teysa/eslint-config-react": "^0.2.1",
     "@teysa/prettier-config": "^0.2.1",
     "@teysa/scaffold-templates": "^0.2.1",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "^18.0.5",
-    "@types/react-transition-group": "^4.4.5",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "classnames": "^2.3.1",
+    "eslint-plugin-storybook": "^0.6.15",
     "focus-trap-react": "^10.2.1",
     "formik": "^2.4.5",
     "fs-extra": "^10.1.0",
@@ -85,11 +78,13 @@
     "react-is": "^18.2.0",
     "react-transition-group": "^4.4.5",
     "size-limit": "^7.0.8",
-    "storybook": "7.4.1",
+    "storybook": "7.5.3",
     "tailwindcss": "^3.3.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "yup": "^1.3.2"
   },
-  "gitHead": "da2eb660e8a38cce5010356650a745ce89016238"
+  "gitHead": "da2eb660e8a38cce5010356650a745ce89016238",
+  "dependencies": {}
 }

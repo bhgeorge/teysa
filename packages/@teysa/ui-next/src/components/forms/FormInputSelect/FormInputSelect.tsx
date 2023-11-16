@@ -14,7 +14,6 @@ interface FormInputSelectProps extends FormInputBase {
 export function FormInputSelect({
   name,
   label,
-  error,
   helpText,
   required,
   options,
@@ -22,7 +21,6 @@ export function FormInputSelect({
   return (
     <FormInputWrapper
       as="select"
-      error={error}
       helpText={helpText}
       icon="expand"
       label={label}

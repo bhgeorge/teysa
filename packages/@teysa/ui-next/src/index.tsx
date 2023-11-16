@@ -1,13 +1,14 @@
 // Atomic
-export * from './components/atomic/Icon/Icon';
 export * from './components/atomic/Button/Button';
 export * from './components/atomic/Chip/Chip';
 export * from './components/atomic/Collapse/Collapse';
 export * from './components/atomic/Heading/Heading';
 export * from './components/atomic/Heading/HeadingTag';
 export * from './components/atomic/Icon/Icon';
+export * from './components/atomic/Icon/Icon';
 export * from './components/atomic/Link/Link';
 export * from './components/atomic/Modal/Modal';
+export * from './components/atomic/SearchInput/SearchInput';
 export * from './components/atomic/Toast/Toast';
 export * from './components/atomic/Toast/ToastContext';
 

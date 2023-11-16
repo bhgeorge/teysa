@@ -8,11 +8,12 @@ interface FormInputTextProps extends FormInputBase {
   inputMode?: 'text' | 'numeric';
   pattern?: string;
   placeholder?: string;
+  autoComplete?: 'off' | 'given-name' | 'family-name' | 'email';
   type?: 'text' | 'email' | 'number';
 }
 
 export function FormInputText({
-  error,
+  autoComplete = 'off',
   helpText,
   inputMode = 'text',
   label,
@@ -24,7 +25,7 @@ export function FormInputText({
 }: FormInputTextProps) {
   return (
     <FormInputWrapper
-      error={error}
+      autoComplete={autoComplete}
       helpText={helpText}
       inputMode={inputMode}
       label={label}

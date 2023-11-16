@@ -6,14 +6,14 @@ import { Link } from '../Link/Link';
 
 type ButtonVariant = 'primary' | 'secondary';
 
-interface ButtonProps {
+type ButtonProps = {
   children: ReactNode;
   disabled?: boolean;
   href?: string;
   onClick?: (event: MouseEvent | TouchEvent) => void;
   type?: 'button' | 'submit';
   variant?: ButtonVariant;
-}
+};
 
 const buttonBaseClasses = classNames(
   'border-2',

@@ -1,5 +1,5 @@
 // Local
-import { Formik } from 'formik';
+import * as Formik from 'formik';
 import { FieldSet } from './FieldSet';
 
 export default {
@@ -8,9 +8,9 @@ export default {
 };
 
 const Template = props => (
-  <Formik onSubmit={() => {}} initialValues={{ teysa: '' }}>
+  <Formik.Formik onSubmit={() => {}} initialValues={{ teysa: '' }}>
     <FieldSet {...props} />
-  </Formik>
+  </Formik.Formik>
 );
 
 export const Default = Template.bind({});

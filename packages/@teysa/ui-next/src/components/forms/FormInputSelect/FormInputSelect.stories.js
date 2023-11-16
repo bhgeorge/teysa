@@ -1,5 +1,5 @@
 // Global
-import { Formik } from 'formik';
+import * as Formik from 'formik';
 // Local
 import { FormInputSelect } from './FormInputSelect';
 
@@ -9,9 +9,9 @@ export default {
 };
 
 const Template = props => (
-  <Formik onSubmit={() => {}} initialValues={{ format: '' }}>
+  <Formik.Formik onSubmit={() => {}} initialValues={{ format: '' }}>
     <FormInputSelect {...props} />
-  </Formik>
+  </Formik.Formik>
 );
 
 export const Default = Template.bind({});

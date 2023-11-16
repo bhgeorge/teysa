@@ -1,5 +1,5 @@
 // Global
-import { Field } from 'formik';
+import * as Formik from 'formik';
 import classNames from 'classnames';
 import * as React from 'react';
 // Local
@@ -13,15 +13,14 @@ import {
 
 export type FormInputCheckboxTypes = 'checkbox' | 'radio';
 
-interface FormInputCheckboxProps extends FormInputBase {
+type FormInputCheckboxProps = FormInputBase & {
   type?: FormInputCheckboxTypes;
   value?: string | number;
-}
+};
 
 export function FormInputCheckbox({
   name,
   label,
-  error,
   helpText,
   required,
   type = 'checkbox',
@@ -29,11 +28,18 @@ export function FormInputCheckbox({
 }: FormInputCheckboxProps) {
   const id = React.useId();
 
+  const { errors, touched } = Formik.useFormikContext();
+
+  const hasError = Boolean(
+    (touched as Record<string, boolean | undefined>)[name] &&
+      (errors as Record<string, string | undefined>)[name]
+  );
+
   return (
     <div>
       <div className="flex gap-4 items-center">
-        <Field
-          aria-describedby={getDescribedBy(id, error, helpText)}
+        <Formik.Field
+          aria-describedby={getDescribedBy(id, hasError, helpText)}
           aria-required={required}
           className={classNames(
             'appearance-none',
@@ -46,7 +52,7 @@ export function FormInputCheckbox({
             {
               'rounded-full': type === 'radio',
             },
-            getBorderColor(!!error)
+            getBorderColor(hasError)
           )}
           id={id}
           name={name}
@@ -55,15 +61,13 @@ export function FormInputCheckbox({
         />
         <label htmlFor={id}>{label}</label>
       </div>
-      {error && (
-        <p
-          role="alert"
-          id={getErrorId(id)}
-          className="text-theme-error my-2 text-sm"
-        >
-          {error}
-        </p>
-      )}
+      <Formik.ErrorMessage name={name}>
+        {err => (
+          <p role="alert" id={getErrorId(id)} className="text-theme-error my-2 text-sm">
+            {err}
+          </p>
+        )}
+      </Formik.ErrorMessage>
       {helpText && (
         <p id={getHelpTextId(id)} className="text-theme-text-alt my-2 text-sm">
           {helpText}
